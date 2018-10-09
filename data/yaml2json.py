@@ -39,5 +39,4 @@ if __name__ == '__main__':
     with open(filename, "r") as f:
         d = yaml.load(f.read())
         d = mangle(d)
-        print js_file_header
         print json.dumps(d, indent=2)
