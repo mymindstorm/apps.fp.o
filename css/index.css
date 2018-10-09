@@ -1,0 +1,22 @@
+body {
+    font-family: Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.background,
+.bodycontent {
+    background-color: #f8f9fa;
+}
+
+.subheader {
+    border-bottom: none;
+}
+
+.col-sm {
+    padding-bottom: 15px;
+}
+
+.icon {
+    float: left;
+    height: 100%;
+    padding-right: 10px;
+}
