@@ -773,7 +773,7 @@ children:
         data:
             icon:
             url: https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst
-            Description:
+            description:
                 Ipsilon is our central authentication agent that is used to
                 authenticate users agains FAS. It is seperate from FAS. The
                 only service that is not using this currently is the wiki.

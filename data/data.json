@@ -866,7 +866,7 @@
         {
           "data": {
             "url": "https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst", 
-            "Description": "Ipsilon is our central authentication agent that is used to authenticate users agains FAS. It is seperate from FAS. The only service that is not using this currently is the wiki. It is a web service that is presented via httpd and is load balanced by our standard haproxy setup.", 
+            "description": "Ipsilon is our central authentication agent that is used to authenticate users agains FAS. It is seperate from FAS. The only service that is not using this currently is the wiki. It is a web service that is presented via httpd and is load balanced by our standard haproxy setup.", 
             "icon": null
           }, 
           "name": "Ipsilon", 
