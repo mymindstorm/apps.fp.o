@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        2.0
+Version:        3.0
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -14,10 +14,11 @@ Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 
 # Needed for getting httpd's gid
+BuildRequires:  python
 BuildRequires:  httpd
 
 # Used for the yaml2{json,html}.py scripts.
-Requires:       PyYAML
+BuildRequires:       PyYAML
 
 %description
 This is static HTML, CSS, and javascript for a landing page for
@@ -31,32 +32,26 @@ diagram.
 %setup -q
 
 %build
-# Nada
+python ./data/yaml2json.py > data.json
 
 %install
-mkdir -p %{buildroot}/%{_bindir}
-install -m 0755 bin/yaml2html.py %{buildroot}/%{_bindir}/%{name}-yaml2html.py
-install -m 0755 bin/yaml2json.py %{buildroot}/%{_bindir}/%{name}-yaml2json.py
-
-mkdir -p %{buildroot}/%{_datadir}/%{name}
-install -m 0644 data/* %{buildroot}/%{_datadir}/%{name}
-
 mkdir -p %{buildroot}/%{prefix}/%{name}
-cp -r {index.html,apps-yaml.html,bootstrap,bootstrap-3.1.1-fedora,css,img,js} %{buildroot}/%{prefix}/%{name}/.
+cp -r {index.html,css,img,js,data} %{buildroot}/%{prefix}/%{name}/.
+rm %{buildroot}/%{prefix}/%{name}/data/yaml2json.py 
+rm %{buildroot}/%{prefix}/%{name}/data/apps.yaml
 
 %files
-%doc README.rst LICENSE CONTRIBUTING.rst
-
-%{_bindir}/%{name}-yaml2json.py
-%{_bindir}/%{name}-yaml2html.py
-
-%{_datadir}/%{name}/apps.yaml
+%doc README.rst CONTRIBUTING.rst
+%license LICENSE
 
 # The rest of the content goes here
 %{prefix}/%{name}/
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Tue Oct 09 2018 Brendan Early <mymindstorm1@gmail.com> - 3.0-1
+- Redesign
+
 * Thu Apr 23 2015 Ralph Bean <rbean@redhat.com> - 2.0-1
 - Add packager and user template strings for make glorious fedmenu future.
 
