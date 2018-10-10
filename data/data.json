@@ -570,14 +570,14 @@
               "https://infrastructure.fedoraproject.org/infra/docs/scmadmin.rst"
             ], 
             "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine.\n", 
-            "url": "https://src.fedoraproject.org/cgit", 
-            "docs_url": "https://github.com/sitaramc/gitolite#readme", 
-            "source_url": "https://github.com/sitaramc/gitolite", 
+            "url": "https://src.fedoraproject.org/", 
+            "docs_url": "https://pagure.io/pagure/raw/master/f/README.rst", 
+            "source_url": "https://pagure.io/pagure", 
             "status_mappings": [
               "pkgs"
             ], 
-            "package_url": "https://src.fedoraproject.org/cgit/{package}.git", 
-            "bugs_url": "http://gitolite.com/gitolite/#contact", 
+            "package_url": "https://src.fedoraproject.org/rpms/{package}", 
+            "bugs_url": "https://pagure.io/pagure/issues", 
             "icon": "git-logo.png"
           }, 
           "name": "SCM", 
