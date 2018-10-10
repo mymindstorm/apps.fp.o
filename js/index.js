@@ -8,7 +8,7 @@ $.ajax({method: 'GET', url: '../data/data.json'}).done(data => {
         let iconprototype = ""
         $.each(data.children, (index, category) => {
             cardprototype = [];
-            cardprototype.push(...['<div class="col-sm">', '<div class="card">', '<div class="card-header">', '<p class="card-title">',category.name, '</p>', '<p class="card-subtitle mb-2 text-muted">', category.data.description, '</p>', '</div>', '<div class="card-block">', '<ul class="list-group list-group-flush">']);
+            cardprototype.push(...['<div class="col-sm pb-4">', '<div class="card">', '<div class="card-header">', '<p class="card-title">',category.name, '</p>', '<p class="card-subtitle mb-2 text-muted">', category.data.description, '</p>', '</div>', '<div class="card-block">', '<ul class="list-group list-group-flush">']);
             $.each(category.children, (index, item) => {
                 if (item.data.icon) {
                     iconprototype = '<div class="icon"><img src="' + '/img/icons/' + item.data.icon + '" height="42" width="42"></div>'

@@ -4,19 +4,20 @@ body {
 
 .background,
 .bodycontent {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
-.subheader {
-    border-bottom: none;
-}
-
-.col-sm {
-    padding-bottom: 15px;
+.footer a {
+    color: inherit;
+    opacity: 0.7;
 }
 
 .icon {
     float: left;
     height: 100%;
     padding-right: 10px;
+}
+
+#subheader {
+    margin-bottom: 0px;
 }
