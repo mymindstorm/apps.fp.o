@@ -32,13 +32,12 @@ diagram.
 %setup -q
 
 %build
-python ./data/yaml2json.py > data.json
+python ./yaml2json.py > ./data/data.json
+python ./yaml2js.py > ./js/data.js
 
 %install
 mkdir -p %{buildroot}/%{prefix}/%{name}
-cp -r {index.html,css,img,js,data} %{buildroot}/%{prefix}/%{name}/.
-rm %{buildroot}/%{prefix}/%{name}/data/yaml2json.py 
-rm %{buildroot}/%{prefix}/%{name}/data/apps.yaml
+cp -r {index.html,favicon.ico,css,img,js,data} %{buildroot}/%{prefix}/%{name}/.
 
 %files
 %doc README.rst CONTRIBUTING.rst
