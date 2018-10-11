@@ -18,6 +18,18 @@ body {
     padding-right: 10px;
 }
 
+.helper {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
 #subheader {
     margin-bottom: 0px;
 }
+
+@media (max-width: 575.98px) { 
+    .icon {
+        display: none;
+    }
+ }

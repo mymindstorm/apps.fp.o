@@ -6,11 +6,6 @@ shopt -s extglob
 VERSION=3.0
 
 rm -rf build
-./build.sh
-mkdir -p dist
-rm -rf dist/apps-fp-o-$VERSION.tar.gz
-pushd build
-tar -czvf ../dist/apps-fp-o-$VERSION.tar.gz ./
-popd
-
+rm -rf ./apps-fp-o-*.tar.gz
+tar -czvf ./apps-fp-o-$VERSION.tar.gz ./
 echo Wrote dist/apps-fp-o-$VERSION.tar.gz

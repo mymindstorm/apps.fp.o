@@ -6,7 +6,7 @@ A dynamic landing page for http://apps.fedoraproject.org
 Build
 -----
 
-Run ``build.sh``
+Run ``build.sh``. Requires PyYAML to be installed.
 
 Help?
 -----
